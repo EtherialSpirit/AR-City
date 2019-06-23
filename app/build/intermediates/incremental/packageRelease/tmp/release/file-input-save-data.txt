@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun Jun 23 09:27:37 EET 2019
+0.baseType=DIRECTORY
+0.base=D\:\\Progect\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1
