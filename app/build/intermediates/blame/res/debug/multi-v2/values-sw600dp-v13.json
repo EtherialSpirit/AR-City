@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Progect\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-complete\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "D:\\Progect\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\NoSure\\.gradle\\caches\\transforms-2\\files-2.1\\2503ae54f3cf42cb39f90ef02524ac63\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\NoSure\\.gradle\\caches\\transforms-2\\files-2.1\\3fdc6a986e0e4dae096d3c8c5cd2f8ed\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\NoSure\\.gradle\\caches\\transforms-2\\files-2.1\\3a50e3fa9e84f6b40496f17c6ea61529\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

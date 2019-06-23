@@ -18,13 +18,9 @@ package com.google.android.gms.samples.vision.ocrreader;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.RectF;
 
 import com.google.android.gms.samples.vision.ocrreader.ui.camera.GraphicOverlay;
-import com.google.android.gms.vision.text.Text;
 import com.google.android.gms.vision.text.TextBlock;
-
-import java.util.List;
 
 /**
  * Graphic instance for rendering TextBlock position, size, and ID within an associated graphic
@@ -34,27 +30,17 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
 
     private int id;
 
-    private static final int TEXT_COLOR = Color.BLUE;
+    private static final int TEXT_COLOR = Color.WHITE;
 
     private static Paint rectPaint;
     private static Paint textPaint;
-    private final TextBlock textBlock;
+    private final TextBlock text;
 
     OcrGraphic(GraphicOverlay overlay, TextBlock text) {
         super(overlay);
 
-        textBlock = text;
+        this.text = text;
 
-        //{++etherial
-        System.out.println(text.getValue());
-        String textValue  = "a.newskogo st.";
-        String textValue1 = text.getValue().toString().toLowerCase();
-        if(textValue1.equals(textValue)){
-           //вызов кнопок на экран и смена activity
-        }
-        //System.out.println(text.getValue());
-
-        //}
         if (rectPaint == null) {
             rectPaint = new Paint();
             rectPaint.setColor(TEXT_COLOR);
@@ -80,7 +66,7 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
     }
 
     public TextBlock getTextBlock() {
-        return textBlock;
+        return text;
     }
 
     /**
@@ -91,12 +77,8 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
      * @return True if the provided point is contained within this graphic's bounding box.
      */
     public boolean contains(float x, float y) {
-        if (textBlock == null) {
-            return false;
-        }
-        RectF rect = new RectF(textBlock.getBoundingBox());
-        rect = translateRect(rect);
-        return rect.contains(x, y);
+        // TODO: Check if this graphic's text contains this point.
+        return false;
     }
 
     /**
@@ -104,21 +86,6 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
      */
     @Override
     public void draw(Canvas canvas) {
-        if (textBlock == null) {
-            return;
-        }
-
-        // Draws the bounding box around the TextBlock.
-        RectF rect = new RectF(textBlock.getBoundingBox());
-        rect = translateRect(rect);
-        canvas.drawRect(rect, rectPaint);
-
-        // Break the text into multiple lines and draw each one according to its own bounding box.
-        List<? extends Text> textComponents = textBlock.getComponents();
-        for(Text currentText : textComponents) {
-            float left = translateX(currentText.getBoundingBox().left);
-            float bottom = translateY(currentText.getBoundingBox().bottom);
-            canvas.drawText(currentText.getValue(), left, bottom, textPaint);
-        }
+        // TODO: Draw the text onto the canvas.
     }
 }
